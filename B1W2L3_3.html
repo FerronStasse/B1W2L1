@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <body onLoad="rekenmachine()">
+
+<form name="ppppp">
+<input type="button" value="Click Here" onClick="rekenmachine()"> 
+</form><br>
+click op button hier boven om nog een berekening uit te voeren. 
+
+    	<script>
+    		function rekenmachine() //rekenmachine function aangemaakt om in "body" een button aan te maken om het te herhalen.
+    		{
+    			var a = prompt("Geeft een getal", '')*1; // var a met een prompt aangemaakt om de eerst getaald te typen.
+    			if(isNaN(a)) // als het geen nummer is zal het niet werken.
+    		{
+    	alert("ongeldige getal"); // hier zal een alert op komen met een text ongeldige getal.
+    	return; // daarna return hij naar "var a" en kan je opnieuwe een getal invoeren.
+    }
+
+    var operatie = prompt("Geef een :\plus\min\keer\delen", 'plus'); // de volgende prompt geeft aan welke je wil doen kwa plis min keer of delen.
+    if(operatie != "plus" && operatie != "min" && operatie != "keer" && operatie != "delen") // Hier zijn de operatie die hier onder worden uitgevoert als ze wat anders invoeren dan plus
+    {
+    	alert("ongeldige, voer plus, min, keer of delen in"); // hier is weer een alert voor ongeldige voor plus, min, keer, of delen.
+    	return; // daarna return hij weer naar prompt van plus, min, keer, delen.
+    }
+
+    var b = prompt("geeft het tweede getal", '')*1; // prompt van het tweede getal
+    if(isNaN(a)) // als dit weer geen getal is zal die weer een alert aangeven.
+    {
+    	alert("ongeldige, voer een getal"); // hier een alert en daarna weer terug naar "var b prompt"
+    	return; // return weer naar getal invoeren.
+    }
+
+    if(operatie == "plus") // hier wordt de plus uitgerekenen
+    {
+    	alert(a+" + "+b+" = "+(a + b));
+    }
+
+    else if(operatie == "min") // hier wordt de min uitgerekenen
+    {
+    alert(a+" - "+b+" = "+(a - b));
+    }
+
+    else if(operatie == "keer") // hier wordt de keer uitgerekenen
+    {
+    alert(a+" * "+b+" = " + b * a );
+    }
+
+    else if(operatie == "delen") // hier wordt de delen uitgerekenen
+    {
+    alert(a+" / "+b+" = " + a  / b);
+    }
+}
+
+
+    		
+    	</script>
+    </body>
+</html>
